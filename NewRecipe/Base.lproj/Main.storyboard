@@ -27,6 +27,7 @@
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Pasta with Pesto" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Krt-7b-6OT">
                                             <rect key="frame" x="155.33333333333337" y="0.0" width="217.66666666666666" height="80"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <rect key="contentStretch" x="1" y="0.0" width="1" height="1"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -35,12 +36,11 @@
                                         <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" image="pesto" id="4fc-RQ-boK">
                                             <rect key="frame" x="20" y="0.0" width="120.33333333333334" height="80"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <rect key="contentStretch" x="1" y="1" width="1" height="0.0"/>
                                         </imageView>
                                     </subviews>
                                 </tableViewCellContentView>
-                                <connections>
-                                    <segue destination="GGd-JU-AfK" kind="show" id="3Yc-3Z-KiH"/>
-                                </connections>
+                                <rect key="contentStretch" x="0.0" y="0.0" width="1" height="0.0"/>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="ixu-PP-IZ3" imageView="EUA-oI-ZfC" rowHeight="80" style="IBUITableViewCellStyleDefault" id="7ZA-EO-HZd">
                                 <rect key="frame" x="0.0" y="118" width="393" height="80"/>
@@ -93,71 +93,46 @@
                     </tableView>
                     <navigationItem key="navigationItem" leftItemsSupplementBackButton="YES" id="Eyv-vU-hRN">
                         <barButtonItem key="rightBarButtonItem" style="plain" id="YA6-IZ-f90">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="I7f-7J-mkb">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="I7f-7J-mkb">
                                 <rect key="frame" x="290" y="5" width="87" height="34.333333333333336"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="plus" catalog="system"/>
                             </button>
                             <connections>
-                                <segue destination="wq7-fN-x1D" kind="presentation" identifier="NewRecipe" id="4ud-x1-nvC"/>
+                                <action selector="AddNewRecipe:" destination="6of-WW-0DI" id="hTK-L3-AlW"/>
+                                <segue destination="c3U-0g-C9f" kind="showDetail" id="yRi-NO-Dwd"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c8C-h2-imv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="6of-WW-0DI" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1101.5267175572519" y="-19.014084507042256"/>
         </scene>
-        <!--New Recipes View Controller-->
-        <scene sceneID="WOz-uV-2hH">
+        <!--Plus Button View Controller-->
+        <scene sceneID="8Vs-vx-p3M">
             <objects>
-                <viewController id="wq7-fN-x1D" customClass="NewRecipesViewController" customModule="NewRecipe" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="g5k-gU-djU">
+                <viewController id="c3U-0g-C9f" customClass="PlusButtonViewController" customModule="NewRecipe" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="XoF-AH-YS5">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="070-RF-3FS">
-                                <rect key="frame" x="96" y="663" width="200" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="KLO-Sa-Po2"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="apP-uv-ABL"/>
-                                    <constraint firstAttribute="width" constant="200" id="dn2-8g-R1a"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Add Recipe"/>
-                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Tyg-Dz-7Sh">
+                                <rect key="frame" x="36" y="175" width="321" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="Wxd-um-575"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="070-RF-3FS" firstAttribute="centerX" secondItem="g5k-gU-djU" secondAttribute="centerX" id="4g3-l0-fL0"/>
-                            <constraint firstItem="070-RF-3FS" firstAttribute="centerY" secondItem="g5k-gU-djU" secondAttribute="centerY" id="6ee-Dj-nfI"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" id="V3B-7h-dej">
-                        <barButtonItem key="backBarButtonItem" title="New Recipe" id="uBk-dE-mxn"/>
-                    </navigationItem>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="rNE-5m-lVY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2331" y="-367"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="G2C-mQ-0vp">
-            <objects>
-                <viewController id="GGd-JU-AfK" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="naC-BQ-Sxo">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="D4s-X4-FS8"/>
+                        <viewLayoutGuide key="safeArea" id="NSy-na-CFD"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="7z2-oi-VoO"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="gbz-p8-AQP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Pr5-Nt-OCF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2331" y="362"/>
+            <point key="canvasLocation" x="2330.5343511450383" y="-352.11267605633805"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Vbk-IO-eeJ">

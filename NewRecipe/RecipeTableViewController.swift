@@ -20,21 +20,17 @@ class RecipeTableViewController: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
     
-    /*@IBAction func didTapButton() {
-        let vc = storyboard?.instantiateViewController(identifier: "New Recipe") as! NewRecipesViewController
-        vc.modalPresentationStyle = .fullScreen
-        present(vc, animated: true )
-    }*/
-    
     let recipes = [
-        Recipe(name: "Pasta with Pesto", description: "Typical Ligurean dish"),
-        Recipe(name: "Chocolate Chip Cookies", description: "Classic American sweet"),
-        Recipe(name: "Pancakes", description: "A sweet start of the day")]
+        Recipe(name: "Pasta with Pesto", description: "Typical Ligurean dish", image: "pesto"),
+        Recipe(name: "Chocolate Chip Cookies", description: "Classic American sweet", image: "cookies"),
+        Recipe(name: "Pancakes", description: "A sweet start of the day", image: "pancake")
+    ]
     
     
     struct Recipe {
         let name: String
         let description: String
+        let image: String
     }
     
     
@@ -54,12 +50,10 @@ class RecipeTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "RecipeCell", for: indexPath)
         
-        let recipe = recipes[indexPath.row]
+        let recipe = self.recipes[indexPath.row]
         cell.textLabel?.text = recipe.name
         //cell.detailTextLabel?.text = recipe.description
-        //cell.imageView?.image = UIImage(named: recipe.image)
-        
-        // Configure the cell...
+        cell.imageView?.image = UIImage(named: recipe.image)
         
         return cell
     }
