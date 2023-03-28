@@ -37,7 +37,7 @@ class PlusButtonViewController: UIViewController, UITableViewDataSource {
         return cell
     }
 
-    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+    private func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         // Return the custom header view for each section
         let headerView = UIView(frame: CGRect(x: 0, y: 0, width: tableView.frame.width, height: 44))
         let textField = UITextField(frame: CGRect(x: 16, y: 8, width: headerView.frame.width - 32, height: 28))
@@ -46,7 +46,7 @@ class PlusButtonViewController: UIViewController, UITableViewDataSource {
         return headerView
     }
 
-    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+    private func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         // Return the height of the custom header view for each section
         return 44
     }

@@ -8,15 +8,21 @@
 import UIKit
 
 class RecipeTableViewController: UITableViewController {
-        
+
     @IBAction func addButtonTapped(_ sender: UIBarButtonItem) {
-        performSegue(withIdentifier: "AddItemSegue", sender: self)
+        //performSegue(withIdentifier: "AddItemSegue", sender: self)
+        let storyboard = UIStoryboard (name: "Main", bundle: nil)
+        let secondVC = storyboard.instantiateViewController(withIdentifier: "PlusButtonViewController")
+        
+        secondVC.modalPresentationStyle = .fullScreen
+        secondVC.modalTransitionStyle = .crossDissolve
+        
+        present(secondVC, animated: true, completion: nil)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "AddItemSegue" {
             if let addItemVC = segue.destination as? PlusButtonViewController {
-                // Pass any data to the modal view controller here
             }
         }
     }
