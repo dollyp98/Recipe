@@ -10,7 +10,8 @@ import UIKit
 
 struct Recipe {
     let name: String
-    let ingredients: String?
+    let ingredients: [String]?
+    let instructions: [String]?
     let imageName: String
 }
 

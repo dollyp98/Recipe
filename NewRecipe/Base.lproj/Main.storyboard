@@ -17,15 +17,15 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="RecipeCell" textLabel="Krt-7b-6OT" imageView="4fc-RQ-boK" rowHeight="80" style="IBUITableViewCellStyleDefault" id="BEO-jx-4dm" customClass="RecipeTableViewCell" customModule="NewRecipe" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="38" width="393" height="80"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="RecipeCell" textLabel="Krt-7b-6OT" imageView="4fc-RQ-boK" rowHeight="103" style="IBUITableViewCellStyleDefault" id="BEO-jx-4dm" customClass="RecipeTableViewCell" customModule="NewRecipe" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="38" width="393" height="103"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="BEO-jx-4dm" id="iDv-or-n1g">
-                                    <rect key="frame" x="0.0" y="0.0" width="393" height="80"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="393" height="103"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="RecipeName" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Krt-7b-6OT">
-                                            <rect key="frame" x="155.33333333333337" y="0.0" width="217.66666666666666" height="80"/>
+                                            <rect key="frame" x="146.66666666666671" y="0.0" width="226.33333333333331" height="103"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <rect key="contentStretch" x="1" y="0.0" width="1" height="1"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="18"/>
@@ -33,8 +33,8 @@
                                             <nil key="highlightedColor"/>
                                             <size key="shadowOffset" width="0.0" height="0.0"/>
                                         </label>
-                                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" image="empty" id="4fc-RQ-boK">
-                                            <rect key="frame" x="20" y="0.0" width="120.33333333333334" height="80"/>
+                                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" insetsLayoutMarginsFromSafeArea="NO" image="empty" id="4fc-RQ-boK">
+                                            <rect key="frame" x="20" y="0.0" width="111.66666666666669" height="103"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </imageView>
                                     </subviews>
@@ -54,7 +54,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" leftItemsSupplementBackButton="YES" id="Eyv-vU-hRN">
-                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="YA6-IZ-f90">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="YA6-IZ-f90">
                             <connections>
                                 <action selector="addButtonTapped:" destination="GTE-jn-gbM" id="LfT-m4-xiC"/>
                                 <segue destination="Bc4-Qf-zQC" kind="presentation" identifier="addRecipe" destinationCreationSelector="addRecipe:" id="OqP-mA-qqE"/>
@@ -151,7 +151,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qRi-OB-yvm">
                                 <rect key="frame" x="31" y="318" width="330" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -182,7 +182,7 @@
                         <outlet property="RecipeImage" destination="vR6-Dz-veh" id="bEk-LU-aec"/>
                         <outlet property="RecipeIngredients" destination="9Re-D4-Jsu" id="kZv-BB-q9W"/>
                         <outlet property="RecipeInstructions" destination="Pof-qs-kEQ" id="Xqt-Su-D1Z"/>
-                        <outlet property="RecipeName" destination="qRi-OB-yvm" id="kKK-a8-RlB"/>
+                        <outlet property="RecipeName" destination="qRi-OB-yvm" id="3oG-T3-ciT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wJf-Gt-tzP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -209,7 +209,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="empty" width="5760" height="3840"/>
+        <image name="empty" width="1678" height="1548"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

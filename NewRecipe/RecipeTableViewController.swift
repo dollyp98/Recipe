@@ -8,8 +8,6 @@
 import UIKit
 
 class RecipeTableViewController: UITableViewController {
-    
-
 
     @IBAction func addButtonTapped(_ sender: UIBarButtonItem) {
         let storyboard = UIStoryboard (name: "Main", bundle: nil)
@@ -45,12 +43,10 @@ class RecipeTableViewController: UITableViewController {
     // MARK: - Table view data source
     
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
         return 1
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
         return recipes.count
     }
     
@@ -59,8 +55,10 @@ class RecipeTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "RecipeCell", for: indexPath)
         
         let recipe = recipes[indexPath.row]
+        
+        //cell.update(with: Recipe)
         cell.textLabel?.text = recipe.name
-        cell.detailTextLabel?.text = recipe.ingredients
+        //cell.detailTextLabel?.text = recipe.detail
         cell.imageView?.image = UIImage(named: recipe.imageName)
         
         return cell
@@ -74,9 +72,4 @@ class RecipeTableViewController: UITableViewController {
     @IBSegueAction func addRecipe(_ coder: NSCoder) -> AddNewRecipesViewController? {
         return AddNewRecipesViewController(coder: coder)
     }
-    
-    
-    // override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-    
-    // return "Section \(section)"
 }
