@@ -23,7 +23,6 @@ class AddNewRecipesViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
     }
     
     @IBAction func saveRecipe(_ sender: Any) {
